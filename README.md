@@ -1,6 +1,6 @@
 # Инстаграм бот
 
-Проект создан для управлением аккаунтом инстаграма
+Проект создан для управлением аккаунтом инстаграма, а в частности залив фото
 
 ## Предварительные условия:
 
@@ -17,8 +17,8 @@
 Пункт 2: Перейдите в папку с кодом в командной строке
 
 ```bash
-$ cd ..\api 4 урок
-$ C:\api 4 урок>
+$ cd ..\instagram_bot
+$ C:\instagram_bot>
 ```
 
 Пункт 3: Установите зависимости
@@ -36,14 +36,32 @@ bot.login(username= username , password=password)
 ```
 или для безопасности создать фаил .env
 
-```bash
 .env
+```bash
 INSTAGRAM_USERNAME=username
 INSTAGRAM_PASSWORD=password
 ```
 
-```bash
 py.py
+```bash
 bot = Bot(like_delay=60)
 bot.login(username=instagram_username, password=instagram_password)
 ```
+
+Пункт 5: запустите код
+
+```bash
+$ py.py
+```
+
+Пункт 6: выберите действие
+
+```bash
+Which account do you want to use? (Type number)
+$ 1: 'login'
+$ 0: add another account.
+$ -1: delete all accounts.
+```
+
+###Цель проекта
+Код написан в образовательных целях на онлайн-курсе для веб-разработчиков (dvmn.org.)[https://dvmn.org/modules/]
