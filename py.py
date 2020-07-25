@@ -5,6 +5,8 @@ import sys
 import time
 from io import open
 from PIL import Image
+from dotenv import load_dotenv
+load_dotenv()
 
 
 def get_hubble_image(url, folder_name):
