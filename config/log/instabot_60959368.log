@@ -1,0 +1,26 @@
+2020-07-25 14:07:12,415 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2020-07-25 14:07:12,416 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\instabot\bot\bot.py
+2020-07-25 14:08:12,964 - instabot version: 0.117.0 (api_login) - DEBUG - Loading cookies
+2020-07-25 14:08:12,965 - instabot version: 0.117.0 (api_login) - DEBUG - Loading uuids
+2020-07-25 14:08:12,965 - instabot version: 0.117.0 (api_login) - INFO - Recovery from C:\Users\user\Desktop\4api-master\api 4 урок/config/tolkonetut_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=7ac8aa61-5184-40ac-9772-54ed9bbff576
+- uuid=304f3e4e-38eb-4896-a115-2fc5bc6dd309
+- client_session_id=a48688d8-9b83-4451-974e-070b7cbe95eb
+- device_id=android-f35c323193c21f5e
+2020-07-25 14:08:12,966 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: False
+2020-07-25 14:08:14,219 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+2020-07-25 14:08:15,004 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+2020-07-25 14:08:15,435 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+2020-07-25 14:08:15,890 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+2020-07-25 14:08:16,353 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/inbox/ returned response: <Response [200]>
+2020-07-25 14:08:16,795 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: direct_v2/get_presence/ returned response: <Response [200]>
+2020-07-25 14:08:19,238 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: news/inbox/?limited_activity=true&show_su=true returned response: <Response [200]>
+2020-07-25 14:08:19,718 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/profile_notice/ returned response: <Response [200]>
+2020-07-25 14:08:20,228 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: discover/explore/ returned response: <Response [200]>
+2020-07-25 14:08:20,236 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'tolkonetut'!
+2020-07-25 14:08:20,237 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Loading Checkpoint file from: C:\Users\user\Desktop\4api-master\api 4 урок/config/tolkonetut.checkpoint
+2020-07-25 14:08:41,471 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: media/configure/? returned response: <Response [200]>
+2020-07-25 14:08:41,867 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/expose/ returned response: <Response [200]>
+2020-07-25 14:08:41,880 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Saving Checkpoint file to: C:\Users\user\Desktop\4api-master\api 4 урок/config/tolkonetut.checkpoint
+2020-07-25 14:08:41,881 - instabot version: 0.117.0 (bot) - INFO - Total requests: 63

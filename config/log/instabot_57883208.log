@@ -1,0 +1,35 @@
+2020-07-25 13:40:10,384 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2020-07-25 13:40:10,385 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\user\AppData\Local\Programs\Python\Python37\lib\site-packages\instabot\bot\bot.py
+2020-07-25 13:40:10,385 - instabot version: 0.117.0 (api_login) - DEBUG - Loading cookies
+2020-07-25 13:40:10,385 - instabot version: 0.117.0 (api_login) - DEBUG - Loading uuids
+2020-07-25 13:40:10,386 - instabot version: 0.117.0 (api_login) - INFO - Recovery from C:\Users\user\Desktop\4api-master\api 4 урок/config/tolkonetut_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=7ac8aa61-5184-40ac-9772-54ed9bbff576
+- uuid=304f3e4e-38eb-4896-a115-2fc5bc6dd309
+- client_session_id=a48688d8-9b83-4451-974e-070b7cbe95eb
+- device_id=android-f35c323193c21f5e
+2020-07-25 13:40:10,386 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: False
+2020-07-25 13:40:11,460 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+2020-07-25 13:40:12,076 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+2020-07-25 13:40:12,080 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'tolkonetut'!
+2020-07-25 13:40:12,080 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Loading Checkpoint file from: C:\Users\user\Desktop\4api-master\api 4 урок/config/tolkonetut.checkpoint
+2020-07-25 13:40:38,106 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: media/configure/? returned response: <Response [200]>
+2020-07-25 13:40:38,594 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/expose/ returned response: <Response [200]>
+2020-07-25 13:40:38,595 - instabot version: 0.117.0 (bot_photo) - INFO - Photo 'images\api_hubblev1_7.JPG' is uploaded.
+2020-07-25 13:41:03,757 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: media/configure/? returned response: <Response [200]>
+2020-07-25 13:41:04,213 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/expose/ returned response: <Response [200]>
+2020-07-25 13:41:04,215 - instabot version: 0.117.0 (bot_photo) - INFO - Photo 'images\api_hubblev1_8.JPG' is uploaded.
+2020-07-25 13:41:32,072 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: media/configure/? returned response: <Response [200]>
+2020-07-25 13:41:32,721 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/expose/ returned response: <Response [200]>
+2020-07-25 13:41:32,722 - instabot version: 0.117.0 (bot_photo) - INFO - Photo 'images\api_hubblev2_7.JPG' is uploaded.
+2020-07-25 13:41:53,131 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: media/configure/? returned response: <Response [200]>
+2020-07-25 13:41:53,594 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/expose/ returned response: <Response [200]>
+2020-07-25 13:41:53,595 - instabot version: 0.117.0 (bot_photo) - INFO - Photo 'images\api_hubblev2_8.JPG' is uploaded.
+2020-07-25 13:42:14,226 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: media/configure/? returned response: <Response [200]>
+2020-07-25 13:42:14,772 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/expose/ returned response: <Response [200]>
+2020-07-25 13:42:14,772 - instabot version: 0.117.0 (bot_photo) - INFO - Photo 'images\api_hubblev3_7.JPG' is uploaded.
+2020-07-25 13:42:37,318 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: media/configure/? returned response: <Response [200]>
+2020-07-25 13:42:37,795 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/expose/ returned response: <Response [200]>
+2020-07-25 13:42:37,795 - instabot version: 0.117.0 (bot_photo) - INFO - Photo 'images\api_hubblev3_8.JPG' is uploaded.
+2020-07-25 13:42:40,739 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Saving Checkpoint file to: C:\Users\user\Desktop\4api-master\api 4 урок/config/tolkonetut.checkpoint
+2020-07-25 13:42:40,739 - instabot version: 0.117.0 (bot) - INFO - Total requests: 49
