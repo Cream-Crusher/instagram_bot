@@ -35,3 +35,15 @@ bot = Bot(like_delay=60)
 bot.login(username= username , password=password)
 ```
 или для безопасности создать фаил .env
+
+```bash
+.env
+INSTAGRAM_USERNAME=username
+INSTAGRAM_PASSWORD=password
+```
+
+```bash
+py.py
+bot = Bot(like_delay=60)
+bot.login(username=instagram_username, password=instagram_password)
+```
