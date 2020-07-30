@@ -8,20 +8,19 @@ from PIL import Image
 from dotenv import load_dotenv
 
 
-def get_hubble_image(url, folder_name):
+def get_hubble_image(url, target_path):
+    print(url)
     response = requests.get(url)
-    response = response.url 
-        
-    with open(folder_name, 'wb') as the_path_to_the_file: 
-        write(response.content) 
+    response.raise_for_status()  
+    with open(target_path, 'wb') as the_path_to_the_file: 
+        the_path_to_the_file.write(response.content) 
         image = Image.open(target_path)
         image.thumbnail((1080, 1080)) 
         image.save(target_path)          
         path_to_pictures.append(target_path)
 
-
 if __name__ == '__main__':
-    load_dotenv()
+    load_dotenv()   
     folder_name = 'images'
     path_to_pictures = []
     url_full=[]
@@ -34,8 +33,8 @@ if __name__ == '__main__':
         response = response['image_files'][-1]['file_url']
         url = response
         url='https:'+url
-        target_path = os.path.join(folder_name , 'api_hubblev{}.JPG'.format(reference_number)) 
-        get_hubble_image(url, folder_name)
+        target_path = os.path.join(folder_name , 'api_hubblev{}.jpg'.format(reference_number)) 
+        get_hubble_image(url, target_path)
 
 
 

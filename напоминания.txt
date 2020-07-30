@@ -1,2 +1,0 @@
-for  id,reference_number in enumerate(reference_number, 1):
-ref заманить на range(3)
