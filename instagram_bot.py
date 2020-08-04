@@ -24,7 +24,7 @@ if __name__ == '__main__':
     folder_name = 'images'
     path_to_pictures = []
     instagram_username = os.getenv('INSTAGRAM_USERNAME')
-    instagram_password = os.getenv('INSTAGRAM_PASSWORD')
+    instagram_password = os.getenv('INSTAGRAM_PASSWORD') 
     for  reference_number in range(1, 4):
         url ='http://hubblesite.org/api/v3/image/{}'.format(reference_number)
         response = requests.get(url, verify=False).json()
@@ -32,9 +32,14 @@ if __name__ == '__main__':
         url = response
         url='https:'+url
         target_path = os.path.join(folder_name , 'api_hubblev{}.jpg'.format(reference_number)) 
-        get_hubble_image(url, target_path)
-        
-     
+        get_hubble_image(url, target_path)  
+    for  reference_number in range(1, 4):
+        url ='https://api.spacexdata.com/v3/launches'
+        response = requests.get(url, verify=False).json()
+        response = response[12]['links']['flickr_images']
+        for id,url in enumerate(response):
+            target_path = os.path.join(folder_name , 'SpaceX_{}.jpg'.format(id)) 
+            get_hubble_image(url, target_path)            
     bot = Bot(like_delay=60)
     bot.login(username=instagram_username, password=instagram_password)
 
@@ -72,3 +77,4 @@ if __name__ == '__main__':
             for id_pictures, upload_image in enumerate(path_to_pictures):        
                 bot.upload_photo(upload_image, caption="Nice pic!")
                 time.sleep(60)
+'''
