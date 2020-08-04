@@ -6,10 +6,11 @@ import time
 from io import open
 from PIL import Image
 from dotenv import load_dotenv
+from instabot import Bot  
 
 
 def get_hubble_image(url, target_path):
-    response = requests.get(url)
+    response = requests.get(url, verify=False)
     response.raise_for_status()  
     with open(target_path, 'wb') as the_path_to_the_file: 
         the_path_to_the_file.write(response.content) 
@@ -26,19 +27,18 @@ if __name__ == '__main__':
     instagram_password = os.getenv('INSTAGRAM_PASSWORD')
     for  reference_number in range(1, 4):
         url ='http://hubblesite.org/api/v3/image/{}'.format(reference_number)
-        response = requests.get(url).json() 
+        response = requests.get(url).json()
         response = response['image_files'][-1]['file_url']
         url = response
         url='https:'+url
         target_path = os.path.join(folder_name , 'api_hubblev{}.jpg'.format(reference_number)) 
         get_hubble_image(url, target_path)
-
-    from instabot import Bot  
-
+        
+     
     bot = Bot(like_delay=60)
     bot.login(username=instagram_username, password=instagram_password)
 
-    while True:
+    if True:
             folder_path = "./pics"
             pics = glob.glob(folder_path + "/*.jpg")
             pics = sorted(pics)
@@ -49,7 +49,8 @@ if __name__ == '__main__':
 
                     pic_name = pic[:-4].split("-")
                     pic_name = "-".join(pic_name[1:])
-                    description_file = folder_path + "/" + pic_name + ".txt"
+                    #description_file = folder_path + "/" + pic_name + ".txt"
+                    description_file = os.path.join(folder_path, pic_name + ".txt")
                     if os.path.isfile(description_file):
                         with open(description_file, "r") as file:
                             caption = file.read()
