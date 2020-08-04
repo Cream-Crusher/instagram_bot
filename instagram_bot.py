@@ -49,10 +49,9 @@ if __name__ == '__main__':
 
                     pic_name = pic[:-4].split("-")
                     pic_name = "-".join(pic_name[1:])
-                    #description_file = folder_path + "/" + pic_name + ".txt"
-                    description_file = os.path.join(folder_path, pic_name + ".txt")
-                    if os.path.isfile(description_file):
-                        with open(description_file, "r") as file:
+                    file_path = os.path.join(folder_path, pic_name + ".txt")
+                    if os.path.isfile(file_path):
+                        with open(file_path, "r") as file:
                             caption = file.read()
                     else:
                         caption = pic_name.replace("-", " ")
