@@ -9,7 +9,28 @@ from dotenv import load_dotenv
 from instabot import Bot  
 
 
-def get_hubble_image(url, target_path):
+def hubble_pictures(folder_name):
+    for  reference_number in range(1, 4):
+            url ='http://hubblesite.org/api/v3/image/{}'.format(reference_number)
+            response = requests.get(url, verify=False).json()
+            response = response['image_files'][-1]['file_url']
+            url = response
+            url='https:'+url
+            target_path = os.path.join(folder_name , 'api_hubblev{}.jpg'.format(reference_number)) 
+            get_image(url, target_path)  
+
+
+def SpaceX_pictures(folder_name):
+    for  reference_number in range(1, 4):
+        url ='https://api.spacexdata.com/v3/launches'
+        response = requests.get(url, verify=False).json()
+        response = response[12]['links']['flickr_images']
+        target_path = os.path.join(folder_name , 'SpaceX_{}.jpg'.format(reference_number))
+        for id,url in enumerate(response):
+            get_image(url, target_path)            
+
+
+def get_image(url, target_path):
     response = requests.get(url, verify=False)
     response.raise_for_status()  
     with open(target_path, 'wb') as the_path_to_the_file: 
@@ -19,29 +40,19 @@ def get_hubble_image(url, target_path):
         image.save(target_path)          
         path_to_pictures.append(target_path)
 
+
 if __name__ == '__main__':
     load_dotenv()   
     folder_name = 'images'
     path_to_pictures = []
     instagram_username = os.getenv('INSTAGRAM_USERNAME')
     instagram_password = os.getenv('INSTAGRAM_PASSWORD') 
-    for  reference_number in range(1, 4):
-        url ='http://hubblesite.org/api/v3/image/{}'.format(reference_number)
-        response = requests.get(url, verify=False).json()
-        response = response['image_files'][-1]['file_url']
-        url = response
-        url='https:'+url
-        target_path = os.path.join(folder_name , 'api_hubblev{}.jpg'.format(reference_number)) 
-        get_hubble_image(url, target_path)  
-    for  reference_number in range(1, 4):
-        url ='https://api.spacexdata.com/v3/launches'
-        response = requests.get(url, verify=False).json()
-        response = response[12]['links']['flickr_images']
-        for id,url in enumerate(response):
-            target_path = os.path.join(folder_name , 'SpaceX_{}.jpg'.format(id)) 
-            get_hubble_image(url, target_path)            
+    hubble_pictures(folder_name)
+    SpaceX_pictures(folder_name)
     bot = Bot(like_delay=60)
     bot.login(username=instagram_username, password=instagram_password)
+    
+
 
     if True:
             folder_path = "./pics"
@@ -77,4 +88,3 @@ if __name__ == '__main__':
             for id_pictures, upload_image in enumerate(path_to_pictures):        
                 bot.upload_photo(upload_image, caption="Nice pic!")
                 time.sleep(60)
-'''
