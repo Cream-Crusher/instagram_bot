@@ -7,7 +7,7 @@ from io import open
 from PIL import Image
 from dotenv import load_dotenv
 from instabot import Bot
-from pprint import pprint
+
 
 def creates_a_link_to_a_hubble_image(folder_name):
     for reference_number in range(1, 4):
@@ -25,7 +25,8 @@ def creates_a_link_to_a_SpaceX_image(folder_name):
     for reference_number in range(1, 4):
         url = 'https://api.spacexdata.com/v3/launches'
         response = requests.get(url, verify=False).json()
-        response = response[12]['links']['flickr_images']
+        response = response[{}]['links']['flickr_images'].format(
+            getting_a_key_by_index)
         target_path = os.path.join(folder_name, 'SpaceX_{}.jpg'.format(
             reference_number))
         for id, url in enumerate(response):
@@ -45,6 +46,7 @@ def download_image(url, target_path):
 
 if __name__ == '__main__':
     load_dotenv()
+    getting_a_key_by_index = 12
     folder_name = 'images'
     path_to_pictures = []
     instagram_username = os.getenv('INSTAGRAM_USERNAME')
