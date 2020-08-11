@@ -57,7 +57,7 @@ if __name__ == '__main__':
     bot.login(username=instagram_username, password=instagram_password)
 
 
-    if True:
+    try:
         folder_path = "./pics"
         pics = glob.glob(folder_path + "/*.jpg")
         pics = sorted(pics)
